@@ -6,19 +6,28 @@ on:
   pull_request:
     branches: [ main ]
 
+# CKV2_GHA_1 FIX: Limit permissions to read-only for the repository
+permissions:
+  contents: read
+
 jobs:
   scan:
     runs-on: ubuntu-latest
+    env:
+      # Future-proofing Node.js as per the warning
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        # Upgraded to v4 to handle Node.js 24 requirements
+        uses: actions/checkout@v4
 
       - name: Run Checkov Scan
         id: checkov
         uses: bridgecrewio/checkov-action@master
         with:
           directory: .
-          framework: all # Scans Terraform, HTML, and Cloud Configurations
-          soft_fail: false # Hard fail if high-security risks are found
+          framework: all 
+          soft_fail: false 
           output_format: cli
           quiet: true
