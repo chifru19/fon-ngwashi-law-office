@@ -53,7 +53,7 @@
         .hero {
             text-align: center;
             padding: 100px 20px;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1920');
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1920');
             background-size: cover;
             background-position: center;
         }
@@ -84,6 +84,22 @@
             font-size: 1.2rem;
             color: var(--text-muted);
             margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #25D366; /* WhatsApp Green */
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
         }
 
         /* Content Sections */
@@ -122,7 +138,7 @@
 
         .social-links a {
             color: var(--text-muted);
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin: 0 15px;
             transition: color 0.3s;
         }
@@ -161,36 +177,42 @@
         </div>
         <h1>Fon Ngwashi Law Offices</h1>
         <p class="subtitle">Barristers & Solicitors of the Supreme Court of Cameroon</p>
+        
+        <a href="https://wa.me/237675895521" class="cta-button" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
     </header>
 
     <div class="container" id="services">
         <div class="grid">
             <div class="card">
+                <i class="fas fa-balance-scale"></i>
+                <h3>Civil Litigation</h3>
+                <p>Expert legal representation and defense in civil disputes before the Cameroon Supreme Court.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-briefcase"></i>
+                <h3>Corporate Law</h3>
+                <p>Providing comprehensive legal counsel for businesses, contracts, and commercial operations.</p>
+            </div>
+            <div class="card">
                 <i class="fas fa-gavel"></i>
-                <h3>Litigation</h3>
-                <p>Expert representation in civil and criminal matters before the highest courts.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-file-contract"></i>
-                <h3>Legal Consulting</h3>
-                <p>Strategic advisory for digital infrastructure, NIST standards, and legal tech.</p>
-            </div>
-            <div class="card">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Data Security</h3>
-                <p>Specialized counsel on data privacy and sovereign digital solutions.</p>
+                <h3>Criminal Defense</h3>
+                <p>Dedicated advocacy and legal protection within the Cameroon judicial system.</p>
             </div>
         </div>
     </div>
 
     <footer id="contact">
         <div class="social-links">
+            <a href="https://www.facebook.com/share/1CbZFd8WyV/" target="_blank"><i class="fab fa-facebook"></i></a>
             <a href="https://github.com/chifru19" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
         <div class="footer-info">
+            <p>Phone: +237 675 895 521</p>
             <p>&copy; 2026 Fon Ngwashi Law Offices. All Rights Reserved.</p>
-            <p>Visit our website: <a href="https://frankfru.com">frankfru.com</a></p>
+            <p>Managed by <a href="https://frankfru.com">frankfru.com</a></p>
         </div>
     </footer>
 
