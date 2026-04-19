@@ -1,0 +1,24 @@
+name: Security Audit (Checkov)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run Checkov Scan
+        id: checkov
+        uses: bridgecrewio/checkov-action@master
+        with:
+          directory: .
+          framework: all # Scans Terraform, HTML, and Cloud Configurations
+          soft_fail: false # Hard fail if high-security risks are found
+          output_format: cli
+          quiet: true
