@@ -27,3 +27,34 @@ footer { text-align: center; padding: 60px 0; border-top: 1px solid #eee; margin
     margin-bottom: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.02);
 }
+
+.review-card {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    min-height: 200px;
+}
+
+.client-text { font-style: italic; margin-bottom: 10px; }
+.client-name { font-weight: bold; color: var(--legal-blue); display: block; margin-bottom: 15px; }
+
+.lawyer-reply {
+    background: rgba(26, 42, 68, 0.05);
+    border-left: 3px solid var(--legal-blue);
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.lawyer-reply strong {
+    color: var(--legal-blue);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.lawyer-reply p {
+    margin: 5px 0 0 0;
+    color: #555;
+}
