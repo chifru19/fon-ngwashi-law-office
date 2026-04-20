@@ -17,3 +17,13 @@ footer { text-align: center; padding: 60px 0; border-top: 1px solid #eee; margin
 .engineer-credits { margin-top: 15px; font-size: 0.85rem; }
 .engineer-credits a { color: var(--legal-blue); text-decoration: none; margin: 0 10px; }
 .engineer-credits a:hover { color: var(--accent-gold); }
+
+.review-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    min-height: 180px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
