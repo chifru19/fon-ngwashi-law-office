@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { background-color: #fff; color: #333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
+        body { background-color: #fff; color: #333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; }
         header { text-align: center; padding: 60px 0; background: #f8f9fa; border-bottom: 1px solid #eee; }
         .header-logo { max-width: 180px; margin-bottom: 20px; }
         .firm-name { font-weight: bold; color: #1a1a1a; text-transform: uppercase; letter-spacing: 2px; }
@@ -18,21 +18,20 @@
             padding: 5px 15px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-top: 10px;
         }
 
-        /* Review Section */
-        #reviews-container { margin-top: 30px; }
+        /* Review Cards */
         .review-card {
             background: #fff; padding: 25px; border-radius: 8px; 
             box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 20px;
             border: 1px solid #eee; min-height: 180px; text-align: center;
         }
-        .star-rating { color: #c5a059; margin-bottom: 15px; font-size: 1.4rem; }
-        .reviewer-name { font-weight: bold; color: #1a1a1a; display: block; margin-bottom: 8px; font-size: 1.1rem; }
-        .reviewer-comment { font-style: italic; color: #555; line-height: 1.5; margin: 0; }
+        .star-rating { color: #c5a059; margin-bottom: 10px; font-size: 1.2rem; }
+        .reviewer-name { font-weight: bold; color: #1a1a1a; display: block; margin-bottom: 5px; }
+        .reviewer-comment { font-style: italic; color: #555; }
 
         .btn-gold {
             background-color: #c5a059; color: white; text-decoration: none;
             padding: 12px 25px; border-radius: 4px; display: inline-block;
-            font-weight: bold; transition: 0.3s; margin-top: 20px; text-transform: uppercase;
+            font-weight: bold; transition: 0.3s; margin-top: 20px;
         }
         .btn-gold:hover { background-color: #a88746; color: white; text-decoration: none; }
 
@@ -41,26 +40,30 @@
             border-radius: 8px; margin: 60px 0; border-left: 6px solid #c5a059;
         }
 
-        /* 📸 UPDATED HERO FOOTER: Focus on Face */
+        /* 📸 FINAL HERO FOOTER: Scaled for Face Visibility */
         .engineer-hero-footer {
             position: relative;
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.85)), 
-                        url('images/owner.png') no-repeat;
+            width: 100%;
+            height: 550px; /* Increased height to give the face more room */
+            background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.88)), url('images/owner.png');
             background-size: cover;
-            background-position: top center; /* CRITICAL: Keeps the face visible */
+            background-position: center 15%; /* Precisely targets the top/face area */
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             color: white;
-            padding: 160px 0;
             text-align: center;
             border-top: 5px solid #c5a059;
-            width: 100%;
         }
-        .engineer-credits p { font-size: 2.2rem; margin-bottom: 30px; font-weight: bold; text-shadow: 2px 2px 8px rgba(0,0,0,0.9); }
+        .engineer-credits p { font-size: 2.2rem; margin-bottom: 25px; font-weight: bold; text-shadow: 2px 2px 10px rgba(0,0,0,0.9); }
         .engineer-links a { 
             color: #c5a059; text-decoration: none; font-weight: bold; 
-            font-size: 1.3rem; margin: 0 20px; text-transform: uppercase;
-            text-shadow: 1px 1px 3px rgba(0,0,0,1);
+            font-size: 1.2rem; margin: 0 15px; text-transform: uppercase;
         }
         .engineer-links a:hover { color: #fff; border-bottom: 2px solid #fff; }
+
+        .sub-footer { text-align: center; padding: 30px; background: #000; color: #555; font-size: 0.8rem; }
     </style>
 </head>
 <body>
@@ -101,7 +104,7 @@
 
     <div class="fortress-box">
         <h4><i class="fa-solid fa-lock"></i> Digital Fortress Architecture</h4>
-        <p>This infrastructure is Engineered by <strong>Frank Fru</strong>. All systems are protected by Cloudflare Zero Trust and NIST-compliant auditing protocols.</p>
+        <p>Managed by <strong>Frank Fru</strong>. Protected by Cloudflare Zero Trust and NIST-compliant auditing protocols.</p>
     </div>
 </div>
 
@@ -115,18 +118,21 @@
                 <a href="https://linkedin.com/in/chifru19" target="_blank">LinkedIn</a>
             </div>
         </div>
-        <p style="margin-top: 50px; font-size: 0.9rem; opacity: 0.5;">&copy; 2026 Fon Ngwashi Law Offices. All Rights Reserved.</p>
     </div>
 </footer>
+
+<div class="sub-footer">
+    &copy; 2026 Fon Ngwashi Law Offices. All Rights Reserved.
+</div>
 
 <script>
     const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRE3ekPt8BIlYnXmeZH_cBrUj2D82SSXRM4KkaKnzwLKCCHESlOEol34BDPXzJxKRl3lwL8yEhSMlMK/pub?output=csv";
 
-    function renderStars(rating) {
+    function getStars(count) {
         let stars = '';
-        const count = parseInt(rating) || 5;
+        const rating = parseInt(count) || 5; // Fallback to 5 if empty
         for(let i=0; i<5; i++) {
-            stars += i < count ? '<i class="fa-solid fa-star"></i>' : '<i class="fa-regular fa-star"></i>';
+            stars += i < rating ? '<i class="fa-solid fa-star"></i>' : '<i class="fa-regular fa-star"></i>';
         }
         return stars;
     }
@@ -134,7 +140,7 @@
     fetch(csvUrl)
         .then(res => res.text())
         .then(csvText => {
-            const lines = csvText.split('\n').slice(1); 
+            const lines = csvText.split('\n').slice(1);
             let html = '';
             lines.forEach(line => {
                 const cols = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
@@ -142,12 +148,11 @@
                     const name = cols[1].replace(/"/g, '').trim();
                     const review = cols[2].replace(/"/g, '').trim();
                     const rating = cols[3].trim();
-                    
                     if(name && review) {
                         html += `
                             <div class="six columns">
                                 <div class="review-card">
-                                    <div class="star-rating">${renderStars(rating)}</div>
+                                    <div class="star-rating">${getStars(rating)}</div>
                                     <span class="reviewer-name">${name}</span>
                                     <p class="reviewer-comment">"${review}"</p>
                                 </div>
@@ -158,7 +163,7 @@
             document.getElementById('reviews-container').innerHTML = html || '<p style="text-align:center;">No secure records found.</p>';
         })
         .catch(() => {
-            document.getElementById('reviews-container').innerHTML = '<p style="text-align:center; color:red;">Database Connection Timeout</p>';
+            document.getElementById('reviews-container').innerHTML = '<p style="text-align:center; color:red;">Connection Error</p>';
         });
 </script>
 
