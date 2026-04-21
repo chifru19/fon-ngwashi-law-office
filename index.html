@@ -7,128 +7,152 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Custom Styling */
-        body { background-color: #fff; color: #333; }
+        body { background-color: #fff; color: #333; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
         header { text-align: center; padding: 60px 0; background: #f8f9fa; border-bottom: 1px solid #eee; }
         .header-logo { max-width: 180px; margin-bottom: 20px; }
         .firm-name { font-weight: bold; color: #1a1a1a; text-transform: uppercase; letter-spacing: 2px; }
         .firm-tagline { font-style: italic; color: #666; }
         
         .security-badge { 
-            display: inline-block; 
-            background: #c5a059; 
-            color: white; 
-            padding: 5px 15px; 
-            border-radius: 4px; 
-            font-size: 0.8rem; 
-            font-weight: bold;
-            margin-top: 10px;
+            display: inline-block; background: #c5a059; color: white; 
+            padding: 5px 15px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; margin-top: 10px;
         }
 
-        .fortress-box { 
-            background: #1a1a1a; 
-            color: white; 
-            padding: 30px; 
-            border-radius: 8px; 
-            margin-top: 40px;
-            border-left: 5px solid #c5a059;
+        /* Review Section */
+        .review-card {
+            background: #fff; padding: 25px; border-radius: 8px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08); margin-bottom: 20px;
+            border: 1px solid #eee; min-height: 180px;
         }
+        .star-rating { color: #c5a059; margin-bottom: 10px; font-size: 1.2rem; }
+        .reviewer-name { font-weight: bold; color: #1a1a1a; display: block; margin-bottom: 5px; }
+        .reviewer-comment { font-style: italic; color: #555; line-height: 1.4; }
 
         .btn-gold {
-            background-color: #c5a059;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            display: inline-block;
-            transition: 0.3s;
+            background-color: #c5a059; color: white; text-decoration: none;
+            padding: 12px 25px; border-radius: 4px; display: inline-block;
+            font-weight: bold; transition: 0.3s; margin-top: 20px;
         }
         .btn-gold:hover { background-color: #a88746; color: white; }
 
-        footer { 
-            text-align: center; 
-            padding: 60px 0; 
-            background: #1a1a1a; 
-            color: #ccc; 
-            margin-top: 80px;
+        .fortress-box { 
+            background: #1a1a1a; color: white; padding: 40px; 
+            border-radius: 8px; margin: 60px 0; border-left: 6px solid #c5a059;
         }
-        .owner-img { 
-            width: 120px; 
-            height: 120px; 
-            border-radius: 50%; 
-            border: 4px solid #c5a059; 
-            margin-bottom: 20px;
-            object-fit: cover;
+
+        /* Full Width Bottom Hero Image */
+        .engineer-hero-footer {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('images/owner.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+            border-top: 5px solid #c5a059;
         }
-        .engineer-credits strong { color: #fff; }
-        .engineer-credits a { color: #c5a059; text-decoration: none; margin: 0 10px; font-weight: bold; }
-        .engineer-credits a:hover { text-decoration: underline; }
-        hr { border-top: 1px solid #ddd; }
+        .engineer-credits p { font-size: 1.8rem; margin-bottom: 25px; }
+        .engineer-links a { 
+            color: #c5a059; text-decoration: none; font-weight: bold; 
+            font-size: 1.2rem; margin: 0 20px; text-transform: uppercase; 
+        }
+        .engineer-links a:hover { color: #fff; }
     </style>
 </head>
 <body>
 
 <header>
     <div class="container">
-        <img src="images/logo1.png" alt="Fon Ngwashi Law Offices Logo" class="header-logo">
+        <img src="images/logo1.png" alt="Logo" class="header-logo">
         <h1 class="firm-name">Fon Ngwashi Law Offices</h1>
         <p class="firm-tagline">Barristers & Solicitors of the Supreme Court of Cameroon</p>
-        <div class="security-badge">
-            <i class="fa-solid fa-shield-halved"></i> &nbsp; NIST SC-7 SECURED INFRASTRUCTURE
-        </div>
+        <div class="security-badge"><i class="fa-solid fa-shield-halved"></i> NIST SC-7 SECURED</div>
     </div>
 </header>
 
-<div class="container" style="margin-top: 50px;">
+<div class="container" style="margin-top: 60px;">
     <div class="row">
         <div class="seven columns">
             <h4>Supreme Advocacy. Absolute Confidentiality.</h4>
-            <p>Providing elite legal representation since 1994. Our infrastructure is managed by specialized IT-Security Engineering to ensure client privilege is never compromised.</p>
-            <p>Specializing in corporate law, international litigation, and civil advocacy with a focus on data integrity and client privacy.</p>
+            <p>Infrastructure managed by specialized IT-Security Engineering to ensure client privilege is never compromised.</p>
         </div>
-        <div class="five columns" style="background: #fdfdfd; padding: 25px; border-radius: 5px; border: 1px solid #eee; border-right: 4px solid #c5a059;">
-            <h6>Direct Correspondence</h6>
+        <div class="five columns" style="background: #fdfdfd; padding: 30px; border-radius: 5px; border-right: 5px solid #c5a059; border-top: 1px solid #eee;">
+            <h6><i class="fa-solid fa-envelope"></i> Correspondence</h6>
             <p><i class="fa-brands fa-whatsapp"></i> +237 675 895 521</p>
             <p><i class="fa-solid fa-location-dot"></i> Bamenda / Douala, Cameroon</p>
         </div>
     </div>
 
-    <hr style="margin: 40px 0;">
+    <hr style="margin: 60px 0;">
 
-    <div style="text-align: center; margin-bottom: 30px;">
-        <h4>Verified Client Experience</h4>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSekdW6g2bSWOEtVkr-TqZ9Ka9y0gLyk9bI35kdyiW3L-lMmEg/viewform" target="_blank" class="btn-gold">
-            <i class="fa-solid fa-pen-to-square"></i> Leave a Review
-        </a>
+    <div style="text-align: center; margin-bottom: 40px;">
+        <h3><i class="fa-solid fa-star"></i> Client Testimonials</h3>
+        <p>Real-time verification via NIST-compliant data protocols.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSekdW6g2bSWOEtVkr-TqZ9Ka9y0gLyk9bI35kdyiW3L-lMmEg/viewform" target="_blank" class="btn-gold">LEAVE A REVIEW</a>
     </div>
 
     <div id="reviews-container" class="row">
-        </div>
+        <p style="text-align:center; opacity:0.5;">Establishing secure connection to database...</p>
+    </div>
 
     <div class="fortress-box">
         <h4><i class="fa-solid fa-lock"></i> Digital Fortress Architecture</h4>
-        <p>This infrastructure is Engineered by Frank Fru. All systems are audited for NIST compliance and protected by Cloudflare Zero Trust protocols to prevent data exfiltration and unauthorized access.</p>
+        <p>Managed by <strong>Frank Fru</strong>. Protected by Cloudflare Zero Trust and NIST-compliant auditing.</p>
     </div>
 </div>
 
-<footer>
+<footer class="engineer-hero-footer">
     <div class="container">
-        <img src="images/owner.png" alt="Frank Fru - Infrastructure Engineer" class="owner-img">
-        
         <div class="engineer-credits">
             <p>Infrastructure Engineered by <strong>Frank Fru</strong></p>
-            <a href="https://frankfru.com" target="_blank">Portfolio</a> | 
-            <a href="https://github.com/chifru19" target="_blank">GitHub</a> | 
-            <a href="https://linkedin.com/in/chifru19" target="_blank">LinkedIn</a>
+            <div class="engineer-links">
+                <a href="https://frankfru.com" target="_blank">Portfolio</a>
+                <a href="https://github.com/chifru19" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/chifru19" target="_blank">LinkedIn</a>
+            </div>
         </div>
-        
-        <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.6;">
-            &copy; 2026 Fon Ngwashi Law Offices. All Rights Reserved.
-        </p>
     </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<script>
+    // Logic to parse CSV and display stars
+    const csvUrl = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRE3ekPt8BIlYnXmeZH_cBrUj2D82SSXRM4KkaKnzwLKCCHESlOEol34BDPXzJxKRl3lwL8yEhSMlMK/pub?output=csv";
+
+    function getStars(count) {
+        let stars = '';
+        for(let i=0; i<5; i++) {
+            stars += i < count ? '<i class="fa-solid fa-star"></i>' : '<i class="fa-regular fa-star"></i>';
+        }
+        return stars;
+    }
+
+    fetch(csvUrl)
+        .then(res => res.text())
+        .then(csvText => {
+            const lines = csvText.split('\n').slice(1); // Skip header
+            let html = '';
+            lines.forEach(line => {
+                const cols = line.split(',');
+                if(cols.length >= 4) {
+                    const name = cols[1].replace(/"/g, '');
+                    const comment = cols[2].replace(/"/g, '');
+                    const rating = parseInt(cols[3]);
+                    html += `
+                        <div class="six columns">
+                            <div class="review-card">
+                                <div class="star-rating">${getStars(rating)}</div>
+                                <span class="reviewer-name">${name}</span>
+                                <p class="reviewer-comment">"${comment}"</p>
+                            </div>
+                        </div>`;
+                }
+            });
+            document.getElementById('reviews-container').innerHTML = html || '<p style="text-align:center;">No reviews yet.</p>';
+        })
+        .catch(() => {
+            document.getElementById('reviews-container').innerHTML = '<p style="text-align:center; color:red;">Connection Error</p>';
+        });
+</script>
 
 </body>
 </html>
