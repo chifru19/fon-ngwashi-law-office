@@ -42,17 +42,17 @@
             border-radius: 8px; margin: 60px 0; border-left: 6px solid #c5a059;
         }
 
-        /* Hero Footer - Large & Visible Background */
+        /* Hero Footer - FIX APPLIED HERE */
         .engineer-hero-footer {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.95)), url('images/owner.png');
+            background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.9)), url('images/owner.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            background-attachment: fixed;
             color: white;
             padding: 160px 0;
             text-align: center;
             border-top: 5px solid #c5a059;
+            width: 100%;
         }
         .engineer-credits p { font-size: 2.2rem; margin-bottom: 30px; font-weight: bold; text-shadow: 2px 2px 8px rgba(0,0,0,0.8); }
         .engineer-links a { 
@@ -79,7 +79,7 @@
             <h4>Supreme Advocacy. Absolute Confidentiality.</h4>
             <p>Infrastructure managed by specialized IT-Security Engineering to ensure client privilege is never compromised.</p>
         </div>
-        <div class="five columns" style="background: #fdfdfd; padding: 30px; border-radius: 5px; border-right: 5px solid #c5a059; border: 1px solid #eee; border-right: 5px solid #c5a059;">
+        <div class="five columns" style="background: #fdfdfd; padding: 30px; border-radius: 5px; border-right: 5px solid #c5a059; border: 1px solid #eee;">
             <h6><i class="fa-solid fa-envelope"></i> Correspondence</h6>
             <p><i class="fa-brands fa-whatsapp"></i> +237 675 895 521</p>
             <p><i class="fa-solid fa-location-dot"></i> Bamenda / Douala, Cameroon</p>
@@ -137,9 +137,6 @@
             let html = '';
             lines.forEach(line => {
                 const cols = line.split(/,(?=(?:(?:[^"]*"){2})*[^"]*$)/);
-                
-                // Maps exactly to: Timestamp(0), Name(1), Review(2), Rating(3)
-                // Ignores Lawyer's Respond (4)
                 if(cols.length >= 4) {
                     const name = cols[1].replace(/"/g, '').trim();
                     const review = cols[2].replace(/"/g, '').trim();
