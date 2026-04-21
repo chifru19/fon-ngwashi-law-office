@@ -6,12 +6,71 @@
     <title>Fon Ngwashi Law Offices | NIST Secured</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Custom Styling */
+        body { background-color: #fff; color: #333; }
+        header { text-align: center; padding: 60px 0; background: #f8f9fa; border-bottom: 1px solid #eee; }
+        .header-logo { max-width: 180px; margin-bottom: 20px; }
+        .firm-name { font-weight: bold; color: #1a1a1a; text-transform: uppercase; letter-spacing: 2px; }
+        .firm-tagline { font-style: italic; color: #666; }
+        
+        .security-badge { 
+            display: inline-block; 
+            background: #c5a059; 
+            color: white; 
+            padding: 5px 15px; 
+            border-radius: 4px; 
+            font-size: 0.8rem; 
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .fortress-box { 
+            background: #1a1a1a; 
+            color: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            margin-top: 40px;
+            border-left: 5px solid #c5a059;
+        }
+
+        .btn-gold {
+            background-color: #c5a059;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+        .btn-gold:hover { background-color: #a88746; color: white; }
+
+        footer { 
+            text-align: center; 
+            padding: 60px 0; 
+            background: #1a1a1a; 
+            color: #ccc; 
+            margin-top: 80px;
+        }
+        .owner-img { 
+            width: 120px; 
+            height: 120px; 
+            border-radius: 50%; 
+            border: 4px solid #c5a059; 
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        .engineer-credits strong { color: #fff; }
+        .engineer-credits a { color: #c5a059; text-decoration: none; margin: 0 10px; font-weight: bold; }
+        .engineer-credits a:hover { text-decoration: underline; }
+        hr { border-top: 1px solid #ddd; }
+    </style>
 </head>
 <body>
 
 <header>
     <div class="container">
+        <img src="images/logo1.png" alt="Fon Ngwashi Law Offices Logo" class="header-logo">
         <h1 class="firm-name">Fon Ngwashi Law Offices</h1>
         <p class="firm-tagline">Barristers & Solicitors of the Supreme Court of Cameroon</p>
         <div class="security-badge">
@@ -25,8 +84,9 @@
         <div class="seven columns">
             <h4>Supreme Advocacy. Absolute Confidentiality.</h4>
             <p>Providing elite legal representation since 1994. Our infrastructure is managed by specialized IT-Security Engineering to ensure client privilege is never compromised.</p>
+            <p>Specializing in corporate law, international litigation, and civil advocacy with a focus on data integrity and client privacy.</p>
         </div>
-        <div class="five columns" style="background: #f4f4f4; padding: 25px; border-radius: 5px; border-right: 4px solid #c5a059;">
+        <div class="five columns" style="background: #fdfdfd; padding: 25px; border-radius: 5px; border: 1px solid #eee; border-right: 4px solid #c5a059;">
             <h6>Direct Correspondence</h6>
             <p><i class="fa-brands fa-whatsapp"></i> +237 675 895 521</p>
             <p><i class="fa-solid fa-location-dot"></i> Bamenda / Douala, Cameroon</p>
@@ -47,20 +107,28 @@
 
     <div class="fortress-box">
         <h4><i class="fa-solid fa-lock"></i> Digital Fortress Architecture</h4>
-        <p>Managed by specialized IT-Security Engineering. All systems audited for NIST compliance and protected by Cloudflare Zero Trust protocols.</p>
+        <p>This infrastructure is Engineered by Frank Fru. All systems are audited for NIST compliance and protected by Cloudflare Zero Trust protocols to prevent data exfiltration and unauthorized access.</p>
     </div>
 </div>
 
 <footer>
     <div class="container">
-        <p>&copy; 2026 Fon Ngwashi Law Offices. All Rights Reserved.</p>
+        <img src="images/owner.png" alt="Frank Fru - Infrastructure Engineer" class="owner-img">
+        
         <div class="engineer-credits">
-            Infrastructure Engineered by <strong>Frank Fru</strong><br>
-            <a href="https://frankfru.com" target="_blank">Website</a> | <a href="https://github.com/chifru19" target="_blank">GitHub</a> | <a href="https://linkedin.com/in/chifru19" target="_blank">LinkedIn</a>
+            <p>Infrastructure Engineered by <strong>Frank Fru</strong></p>
+            <a href="https://frankfru.com" target="_blank">Portfolio</a> | 
+            <a href="https://github.com/chifru19" target="_blank">GitHub</a> | 
+            <a href="https://linkedin.com/in/chifru19" target="_blank">LinkedIn</a>
         </div>
+        
+        <p style="margin-top: 30px; font-size: 0.9rem; opacity: 0.6;">
+            &copy; 2026 Fon Ngwashi Law Offices. All Rights Reserved.
+        </p>
     </div>
 </footer>
 
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
