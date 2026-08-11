@@ -11,7 +11,8 @@
         header { text-align: center; padding: 40px 20px; background: #f8f9fa; border-bottom: 1px solid #eee; }
         .header-logo { max-width: 160px; margin-bottom: 15px; }
         .firm-name { font-weight: bold; color: #1a1a1a; text-transform: uppercase; letter-spacing: 2px; font-size: 2.2rem; }
-        .firm-tagline { font-style: italic; color: #666; font-size: 1rem; }
+        .firm-tagline { font-style: italic; color: #666; font-size: 1rem; margin-bottom: 2px; }
+        .firm-tagline-fr { font-style: italic; color: #888; font-size: 0.95rem; }
         
         .security-badge { 
             display: inline-block; background: #c5a059; color: white; 
@@ -24,8 +25,9 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 20px;
             border: 1px solid #eee; border-top: 4px solid #c5a059; height: 100%;
         }
-        .practice-card h5 { font-size: 1.2rem; font-weight: bold; color: #1a1a1a; margin-bottom: 15px; }
-        .practice-card p { font-size: 0.95rem; color: #555; }
+        .practice-card h5 { font-size: 1.1rem; font-weight: bold; color: #1a1a1a; margin-bottom: 10px; }
+        .practice-card p { font-size: 0.9rem; color: #555; }
+        .practice-card hr { margin: 15px 0; border-color: #f1f1f1; }
 
         /* Review Cards */
         .review-card {
@@ -49,7 +51,7 @@
             border-radius: 8px; margin: 40px 0; border-left: 6px solid #c5a059;
         }
 
-        /* 📱 RESPONSIVE SIDE-BY-SIDE ABOUT SECTION */
+        /* ABOUT SECTION */
         .about-section {
             background: #fdfdfd; padding: 50px 20px; border-radius: 8px;
             border: 1px solid #eee; margin: 40px 0; border-left: 5px solid #c5a059;
@@ -78,6 +80,14 @@
         .engineer-links a:hover { color: #fff; border-bottom: 2px solid #fff; }
 
         .sub-footer { text-align: center; padding: 25px; background: #000; color: #555; font-size: 0.8rem; }
+        
+        .french-subtext {
+            color: #666;
+            font-size: 0.95em;
+            margin-top: 5px;
+            border-left: 2px solid #c5a059;
+            padding-left: 10px;
+        }
     </style>
 </head>
 <body>
@@ -87,6 +97,7 @@
         <img src="images/logo1.png" alt="Logo" class="header-logo">
         <h1 class="firm-name">Fon Ngwashi Law Offices</h1>
         <p class="firm-tagline">Barristers & Solicitors of the Supreme Court of Cameroon</p>
+        <p class="firm-tagline-fr">Avocats à la Cour Suprême du Cameroun</p>
         <div class="security-badge"><i class="fa-solid fa-shield-halved"></i> NIST SC-7 SECURED</div>
     </div>
 </header>
@@ -95,29 +106,36 @@
     <!-- INTRO & CONTACT INFO -->
     <div class="row">
         <div class="seven columns">
-            <h4>Supreme Advocacy. Absolute Confidentiality.</h4>
-            <p><strong>Solution Focused:</strong> We handle legal challenges and issues on behalf of our clients in a professional and courteous manner. We represent individuals and businesses alike.</p>
-            <p><strong>Experienced Lawyers:</strong> Our lawyers are experts in their fields of specialization, but they are also widely knowledgeable, bringing an integrated understanding of law, society and policy to our practice.</p>
+            <h4>Supreme Advocacy. Absolute Confidentiality.<br><span style="font-size: 0.8em; color: #666; font-weight: normal;">Plaidoirie Suprême. Confidentialité Absolue.</span></h4>
+            
+            <p><strong>Solution Focused:</strong> We handle legal challenges and issues on behalf of our clients in a professional and courteous manner. We represent individuals and businesses alike.<br>
+            <span class="french-subtext"><strong>Axé sur les solutions :</strong> Nous traitons les défis juridiques au nom de nos clients de manière professionnelle et courtoise. Particuliers et entreprises.</span></p>
+            
+            <p><strong>Experienced Lawyers:</strong> Our lawyers are experts in their fields of specialization, but they are also widely knowledgeable, bringing an integrated understanding of law, society and policy to our practice.<br>
+            <span class="french-subtext"><strong>Avocats expérimentés :</strong> Nos avocats sont des experts dans leurs domaines et possèdent une vaste compréhension intégrée du droit, de la société et des politiques.</span></p>
         </div>
         <div class="five columns" style="background: #fdfdfd; padding: 25px; border-radius: 5px; border-right: 5px solid #c5a059; border: 1px solid #eee; margin-top: 20px;">
-            <h6><i class="fa-solid fa-envelope"></i> Correspondence & Contact</h6>
+            <h6><i class="fa-solid fa-envelope"></i> Correspondence & Contact / Contact</h6>
             <p><i class="fa-solid fa-location-dot"></i> Douala-Bonaberi Ancienne Route, Opposite Pharmacie de Bonambappe, PMB 12949 Douala, Cameroon</p>
             <p><i class="fa-brands fa-whatsapp"></i> +237 675 895 521 / +237 694 773 399</p>
             <p><i class="fa-solid fa-at"></i> contact@fonngwashilaw.com / frankngwashi83@gmail.com</p>
-            <p><i class="fa-solid fa-clock"></i> Mon to Fri – 8:00am to 5:00pm</p>
+            <p><i class="fa-solid fa-clock"></i> Mon to Fri – 8:00am to 5:00pm / Lun - Ven : 8h00 à 17h00</p>
         </div>
     </div>
 
-    <!-- 📸 SIDE-BY-SIDE ABOUT US SECTION (Image on Side, Text Cleanly Legible) -->
+    <!-- 📸 SIDE-BY-SIDE ABOUT US SECTION -->
     <div class="about-section">
         <div class="row" style="display: flex; align-items: center; flex-wrap: wrap;">
             <div class="four columns about-image-container">
                 <img src="images/owner.png" alt="Law Firm Leadership">
             </div>
             <div class="eight columns about-text" style="margin-top: 20px;">
-                <h3>About Us & Our Expertise</h3>
+                <h3>About Us & Our Expertise / À Propos & Expertise</h3>
                 <p>The <strong>FON NGWASHI LAW OFFICES</strong> is a full service law firm with the know-how to handle the legal needs of clients in Cameroon's peculiar business environment. With offices in the cosmopolitan city of Douala, we are strategically placed to offer top quality legal services to our clients in the major economic hubs of the country and of the CEMAC and OHADA spaces.</p>
-                <p>The Firm has distinguished itself in delivering bespoke services to satisfy its clients over the years. With a broad outlook, making us one of the few truly full-service law firms in Cameroon, we have developed mastery over a wide range of legal matters that border the litigious and the transactional, covering Corporate & Commercial, Energy & Natural Resources, Telecommunications, Foreign Investment, Banking & Finance, Shipping & Maritime, Aviation, Taxation, Commercial Litigation, Immigration, Alternative Dispute Resolution and Project Finance.</p>
+                <p class="french-subtext">Le cabinet <strong>FON NGWASHI LAW OFFICES</strong> est un cabinet d'avocats pluridisciplinaire doté du savoir-faire nécessaire pour répondre aux besoins juridiques des clients dans l'environnement commercial particulier du Cameroun. Basés à Douala, nous offrons des services de qualité dans les espaces CEMAC et OHADA.</p>
+                
+                <p>The Firm has distinguished itself in delivering bespoke services to satisfy its clients over the years, covering Corporate & Commercial, Energy & Natural Resources, Telecommunications, Foreign Investment, Banking & Finance, Shipping & Maritime, Aviation, Taxation, Commercial Litigation, Immigration, Alternative Dispute Resolution and Project Finance.</p>
+                <p class="french-subtext">Le cabinet s'est distingué par des services sur mesure couvrant le droit des sociétés, l'énergie, les télécommunications, les investissements étrangers, le secteur bancaire, le droit maritime, l'aviation, la fiscalité, le contentieux et l'arbitrage.</p>
             </div>
         </div>
     </div>
@@ -126,27 +144,33 @@
 
     <!-- PRACTICE AREAS -->
     <div style="text-align: center; margin-bottom: 30px;">
-        <h3>Practice Areas</h3>
-        <p>Comprehensive, specialized legal representation tailored to your needs.</p>
+        <h3>Practice Areas / Domaines de Pratique</h3>
+        <p>Comprehensive, specialized legal representation tailored to your needs. / Représentation juridique spécialisée adaptée à vos besoins.</p>
     </div>
 
     <div class="row">
         <div class="four columns">
             <div class="practice-card">
                 <h5><i class="fa-solid fa-copyright"></i> Intellectual Property Law</h5>
-                <p>Protection and enforcement of creator and owner rights via OAPI registration (trademarks, patents, copyrights) and protecting trade secrets through air-tight Non-Disclosure Agreements.</p>
+                <p>Protection and enforcement via OAPI registration (trademarks, patents, copyrights) and Non-Disclosure Agreements.</p>
+                <hr>
+                <p style="color: #666; font-size: 0.85rem;"><em>Propriété Intellectuelle : Protection et application via l'enregistrement OAPI et accords de non-divulgation.</em></p>
             </div>
         </div>
         <div class="four columns">
             <div class="practice-card">
                 <h5><i class="fa-solid fa-users"></i> Family Law</h5>
-                <p>Sincere, straightforward advice and skilled representation for Divorce, Child Custody, Prenuptial & Postnuptial Agreements, Adoption, and family-related legal crises.</p>
+                <p>Sincere advice and representation for Divorce, Child Custody, Prenuptial Agreements, Adoption, and family legal crises.</p>
+                <hr>
+                <p style="color: #666; font-size: 0.85rem;"><em>Droit de la Famille : Conseils et représentation pour divorce, garde d'enfants, contrats de mariage et adoption.</em></p>
             </div>
         </div>
         <div class="four columns">
             <div class="practice-card">
                 <h5><i class="fa-solid fa-ship"></i> Maritime Law</h5>
-                <p>Admiralty and shipping law guidance covering navigation, marine injuries, unseaworthiness claims, maintenance & cure for seamen, and passenger protection rights.</p>
+                <p>Admiralty and shipping law guidance covering navigation, marine injuries, unseaworthiness claims, and passenger rights.</p>
+                <hr>
+                <p style="color: #666; font-size: 0.85rem;"><em>Droit Maritime : Navigation, blessures en mer, réclamations pour innavigabilité et droits des passagers.</em></p>
             </div>
         </div>
     </div>
@@ -155,19 +179,25 @@
         <div class="four columns">
             <div class="practice-card">
                 <h5><i class="fa-solid fa-briefcase"></i> Labor & Immigration</h5>
-                <p>Advising on Cameroon Labor Code and ILO standards, drafting employment contracts, managing work permits, visas, letters of invitation, and expatriate regulations.</p>
+                <p>Advising on Cameroon Labor Code, drafting contracts, managing work permits, visas, and expatriate regulations.</p>
+                <hr>
+                <p style="color: #666; font-size: 0.85rem;"><em>Travail & Immigration : Code du travail camerounais, contrats, permis de travail et réglementation des expatriés.</em></p>
             </div>
         </div>
         <div class="four columns">
             <div class="practice-card">
                 <h5><i class="fa-solid fa-scale-balanced"></i> Criminal Law</h5>
-                <p>Aggressive criminal defense representation for individuals and businesses under investigation or facing charges, protecting your freedom and rights.</p>
+                <p>Aggressive criminal defense representation for individuals and businesses under investigation, protecting your freedom and rights.</p>
+                <hr>
+                <p style="color: #666; font-size: 0.85rem;"><em>Droit Pénal : Défense pénale agressive pour particuliers et entreprises faisant l'objet d'enquêtes.</em></p>
             </div>
         </div>
         <div class="four columns">
             <div class="practice-card">
                 <h5><i class="fa-solid fa-building-columns"></i> Corporate Solutions</h5>
-                <p>Full-service transactional and litigation counsel helping businesses navigate the complexities of Cameroon's unique economic environment.</p>
+                <p>Full-service transactional and litigation counsel helping businesses navigate Cameroon's complex economic environment.</p>
+                <hr>
+                <p style="color: #666; font-size: 0.85rem;"><em>Solutions d'Entreprise : Conseil transactionnel et contentieux pour naviguer l'environnement économique.</em></p>
             </div>
         </div>
     </div>
@@ -175,9 +205,9 @@
     <hr style="margin: 40px 0;">
 
     <div style="text-align: center; margin-bottom: 30px;">
-        <h3><i class="fa-solid fa-star"></i> Verified Testimonials</h3>
-        <p>Live-audited reviews from our secure infrastructure.</p>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSekdW6g2bSWOEtVkr-TqZ9Ka9y0gLyk9bI35kdyiW3L-lMmEg/viewform" target="_blank" class="btn-gold">Leave a Review</a>
+        <h3><i class="fa-solid fa-star"></i> Verified Testimonials / Témoignages</h3>
+        <p>Live-audited reviews from our secure infrastructure. / Avis vérifiés en direct.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSekdW6g2bSWOEtVkr-TqZ9Ka9y0gLyk9bI35kdyiW3L-lMmEg/viewform" target="_blank" class="btn-gold">Leave a Review / Laisser un avis</a>
     </div>
 
     <div id="reviews-container" class="row">
@@ -186,14 +216,15 @@
 
     <div class="fortress-box">
         <h4><i class="fa-solid fa-lock"></i> Digital Fortress Architecture</h4>
-        <p>Managed by <strong>chi fru</strong>. Protected by Cloudflare Zero Trust and NIST-compliant auditing protocols.</p>
+        <p>Managed by <strong>chi fru</strong>. Protected by Cloudflare Zero Trust and NIST-compliant auditing protocols.<br>
+        <em style="color: #aaa; font-size: 0.9rem;">Géré par chi fru. Protégé par Cloudflare Zero Trust et protocoles NIST.</em></p>
     </div>
 </div>
 
 <footer class="engineer-hero-footer">
     <div class="container">
         <div class="engineer-credits">
-            <p>Infrastructure Engineered by <strong>chi fru</strong></p>
+            <p>Infrastructure Engineered by <strong>chi fru</strong> / Conçu par <strong>chi fru</strong></p>
             <div class="engineer-links">
                 <a href="https://frankfru.com" target="_blank">Portfolio</a>
                 <a href="https://github.com/chifru19" target="_blank">GitHub</a>
@@ -204,7 +235,7 @@
 </footer>
 
 <div class="sub-footer">
-    &copy; 2026 Fon Ngwashi Law Offices. All Rights Reserved.
+    &copy; 2026 Fon Ngwashi Law Offices. All Rights Reserved / Tous Droits Réservés.
 </div>
 
 <script>
